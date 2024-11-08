@@ -4,12 +4,14 @@ import { PokemonContext } from '../context/PokemonContext';
 
 export const HomePage = () => {
 
+	// Utiliza el contexto PokemonContext y desestructura las funciones y estados necesarios.
     const {onClickLoadMore, active, setActive} = useContext(PokemonContext)
 
 	return (
 		<>
 			<div className='container-filter container'>
 				<div className='icon-filter' onClick={() => setActive(!active)}>
+					{/* Comienza el elemento SVG para el icono de filtro. */}
 					<svg
 						xmlns='http://www.w3.org/2000/svg'
 						fill='none'
@@ -27,9 +29,12 @@ export const HomePage = () => {
 					<span>Filtrar</span>
 				</div>
 			</div>
+			{/* Renderiza el componente PokemonList que muestra la lista de Pokémon. */}
 			<PokemonList />
+			{/* Renderiza el componente FilterBar que permite aplicar filtros. */}
             <FilterBar />
             <div className="container-btn-load-more container">
+				{/* Botón que llama a la función onClickLoadMore al hacer clic. */}
                 <button className='btn-load-more' onClick={onClickLoadMore}>
                     Cargar más
                 </button>

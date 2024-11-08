@@ -1,643 +1,654 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+/* Definición de variables de color */
 :root {
-	--color-fire: #ff7402;
-	--color-grass: #9bcc50;
-	--color-steel: #9eb7b8;
-	--color-water: #4592c4;
-	--color-psychic: #f366b9;
-	--color-ground: #ab9842;
-	--color-ice: #51c4e7;
-	--color-flying: #3dc7ef;
-	--color-ghost: #4d5b64;
-	--color-normal: #a4acaf;
-	--color-poison: #7e0058;
-	--color-rock: #a38c21;
-	--color-fighting: #d56723;
-	--color-dark: #707070;
-	--color-bug: #729f3f;
-	--color-dragon: linear-gradient(180deg, #53a4cf 50%, #f16e57 50%);
-	--color-electric: #bba909;
-	--color-fairy: #fdb9e9;
-	--color-shadow: #7b62a3;
-	--color-unknow: #757575;
+	--color-fire: #ff7402; /* Color fuego */
+	--color-grass: #9bcc50; /* Color hierba */
+	--color-steel: #9eb7b8; /* Color acero */
+	--color-water: #4592c4; /* Color agua */
+	--color-psychic: #f366b9; /* Color psíquico */
+	--color-ground: #ab9842; /* Color tierra */
+	--color-ice: #51c4e7; /* Color hielo */
+	--color-flying: #3dc7ef; /* Color volador */
+	--color-ghost: #4d5b64; /* Color fantasma */
+	--color-normal: #a4acaf; /* Color normal */
+	--color-poison: #7e0058; /* Color veneno */
+	--color-rock: #a38c21; /* Color roca */
+	--color-fighting: #d56723; /* Color lucha */
+	--color-dark: #707070; /* Color oscuro */
+	--color-bug: #729f3f; /* Color bicho */
+	--color-dragon: linear-gradient(180deg, #53a4cf 50%, #f16e57 50%); /* Color dragón */
+	--color-electric: #bba909; /* Color eléctrico */
+	--color-fairy: #fdb9e9; /* Color hada */
+	--color-shadow: #7b62a3; /* Color sombra */
+	--color-unknow: #757575; /* Color desconocido */
 
-	--color1: #843802;
-	--color2: #CE8E47;
-	--color3: #B46C22;
-	--color4: #ECD1A5;
+	--color1: #843802; /* Color primario */
+	--color2: #CE8E47; /* Color secundario */
+	--color3: #B46C22; /* Color terciario */
+	--color4: #ECD1A5; /* Color de fondo */
 }
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: 'Nanum Gothic';
+	margin: 0; /* Eliminar márgenes */
+	padding: 0; /* Eliminar relleno */
+	box-sizing: border-box; /* Incluir padding y border en el tamaño total */
+	font-family: 'Nanum Gothic'; /* Fuente principal */
 }
 
 body {
-	background: #eddede;
-	background: -webkit-linear-gradient(to right, #ECD1A5, #ECD1A5);
-	background: linear-gradient(to right, #ECD1A5, #ECD1A5);
+	background: #eddede; /* Color de fondo */
+	background: -webkit-linear-gradient(to right, #ECD1A5, #ECD1A5); /* Gradiente para navegadores WebKit */
+	background: linear-gradient(to right, #ECD1A5, #ECD1A5); /* Gradiente estándar */
 }
 
 /* Globales */
 .container {
-	max-width: 1440px;
-	margin: 0 auto;
+	max-width: 1440px; /* Ancho máximo del contenedor */
+	margin: 0 auto; /* Centrar el contenedor */
 }
 
 /* Header */
 header {
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	padding: 40px 0;
+	display: flex; /* Usar flexbox */
+	align-items: center; /* Alinear elementos verticalmente */
+	justify-content: space-between; /* Espacio entre elementos */
+	padding: 40px 0; /* Relleno superior e inferior */
 }
 
 .logo img {
-	width: 150px;
+	width: 150px; /* Ancho de la imagen del logo */
 }
 
 header form {
-	display: flex;
-	align-items: center;
-
-	gap: 15px;
+	display: flex; /* Usar flexbox para el formulario */
+	align-items: center; /* Alinear elementos verticalmente */
+	gap: 15px; /* Espacio entre elementos */
 }
 
 .form-group {
-	display: flex;
-	align-items: center;
-	gap: 10px;
-	background-color: #fff;
-	border: 3px solid var(--color1);
-	padding: 15px 20px;
-	border-radius: 25px;
+	display: flex; /* Usar flexbox para el grupo de formulario */
+	align-items: center; /* Alinear elementos verticalmente */
+	gap: 10px; /* Espacio entre elementos */
+	background-color: #fff; /* Color de fondo blanco */
+	border: 3px solid var(--color1); /* Borde con color primario */
+	padding: 15px 20px; /* Relleno */
+	border-radius: 25px; /* Bordes redondeados */
 }
 
 .form-group input {
-	/* padding: 15px 30px; */
-	background: #fff;
-	width: 300px;
-	border: none;
-	outline: none;
-	font-size: 15px;
+	background: #fff; /* Color de fondo blanco */
+	width: 300px; /* Ancho del campo de entrada */
+	border: none; /* Sin borde */
+	outline: none; /* Sin contorno */
+	font-size: 15px; /* Tamaño de fuente */
 }
 
 .icon-search {
-	width: 20px;
-	height: 20px;
-	stroke: var(--color1);
+	width: 20px; /* Ancho del icono de búsqueda */
+	height: 20px; /* Alto del icono de búsqueda */
+	stroke: var(--color1); /* Color del icono */
 }
 
 .btn-search {
-	border: none;
-	outline: none;
-	border-radius: 25px;
-	padding: 15px 30px;
-	color: #fff;
-	background-color: var(--color1);
-	font-weight: 700;
-	cursor: pointer;
-	letter-spacing: 2px;
+	border: none; /* Sin borde */
+	outline: none; /* Sin contorno */
+	border-radius: 25px; /* Bordes redondeados */
+	padding: 15px 30px; /* Relleno */
+	color: #fff; /* Color del texto */
+	background-color: var(--color1); /* Color de fondo del botón */
+	font-weight: 700; /* Peso de la fuente */
+	cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
+	letter-spacing: 2px; /* Espaciado entre letras */
 }
 
 .btn-search:hover {
-	background-color: var(--color2);
-	color: #000;
-	font-weight: 700;
+	background-color: var(--color2); /* Color de fondo al pasar el ratón */
+	color: #000; /* Color del texto al pasar el ratón */
+	font-weight: 700; /* Peso de la fuente al pasar el ratón */
 }
 
 /* Btn Filter */
 .container-filter {
-	display: flex;
+	display: flex; /* Usar flexbox para el contenedor de filtros */
 }
-.container-filter span{
-	font-size: 20px;
-	font-weight: 600;
+.container-filter span {
+	font-size: 20px; /* Tamaño de fuente del texto del filtro */
+	font-weight: 600; /* Peso de la fuente */
 }
 
 .icon-filter {
-	display: flex;
-	align-items: center;
-	gap: 15px;
-
-	margin-bottom: 20px;
-	cursor: pointer;
+	display: flex; /* Usar flexbox para el icono de filtro */
+	align-items: center; /* Alinear elementos verticalmente */
+	gap: 15px; /* Espacio entre elementos */
+	margin-bottom: 20px; /* Margen inferior */
+	cursor: pointer; /* Cambiar cursor al pasar sobre el icono */
 }
 
 .icon-filter .icon {
-	width: 30px;
-	height: 30px;
-	stroke: #000;
+	width: 30px; /* Ancho del icono */
+	height: 30px; /* Alto del icono */
+	stroke: #000; /* Color del icono */
 }
 
 /* Card List Pokemon */
 .card-list-pokemon {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 20px;
+	display: grid; /* Usar grid para la lista de cartas */
+	grid-template-columns: repeat(4, 1fr); /* Cuatro columnas de igual tamaño */
+	gap: 20px; /* Espacio entre cartas */
 }
 
 .card-pokemon {
-	cursor: pointer;
-	text-decoration: none;
+	cursor: pointer; /* Cambiar cursor al pasar sobre la carta */
+	text-decoration: none; /* Sin subrayado */
 }
 
 .card-img {
-	background-color: var(--color3);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border-radius: 15px;
-	height: 250px;
+	background-color: var(--color3); /* Color de fondo de la imagen de la carta */
+	display: flex; /* Usar flexbox */
+	align-items: center; /* Alinear elementos verticalmente */
+	justify-content: center; /* Centrar contenido horizontalmente */
+	border-radius: 15px; /* Bordes redondeados */
+	height: 250px; /* Altura de la imagen */
 }
 
 .card-img img {
-	width: 100%;
-	height: 100%;
+	width: 100%; /* Ancho completo de la imagen */
+	height: 100%; /* Alto completo de la imagen */
 }
 
 .card-info {
-	padding: 15px;
+	padding: 15px; /* Relleno de la información de la carta */
 }
 
 .card-info h3 {
-	color: #000;
+	color: #000; /* Color del texto del título */
 }
 
 .pokemon-id {
-	display: block;
-	color: #000;
-	margin-bottom: 15px;
-	font-weight: 700;
+	display: block; /* Mostrar como bloque */
+	color: #000; /* Color del texto */
+	margin-bottom: 15px; /* Margen inferior */
+	font-weight: 700; /* Peso de la fuente */
 }
 
 .card-types {
-	display: flex;
-	gap: 10px;
-	margin-top: 10px;
+	display: flex; /* Usar flexbox para los tipos de Pokémon */
+	gap: 10px; /* Espacio entre tipos */
+	margin-top: 10px; /* Margen superior */
 }
 
 .card-types span {
-	font-size: 20px;
-	padding: 20px 30px;
-	border-radius: 5px;
-	color: #fff;
-	font-weight: 900;
+	font-size: 20px; /* Tamaño de fuente de los tipos */
+	padding: 20px 30px; /* Relleno */
+	border-radius: 5px; /* Bordes redondeados */
+	color: #fff; /* Color del texto */
+	font-weight: 900; /* Peso de la fuente */
 }
 
 /* Types of Pokemon */
 .water {
-	background-color: var(--color-water);
+	background-color: var(--color-water); /* Color de fondo para tipo agua */
 }
 
 .grass {
-	background-color: var(--color-grass);
+	background-color: var(--color-grass); /* Color de fondo para tipo hierba */
 }
 
 .poison {
-	background-color: var(--color-poison);
+	background-color: var(--color-poison); /* Color de fondo para tipo veneno */
 }
 
 .fire {
-	background-color: var(--color-fire);
+	background-color: var(--color-fire); /* Color de fondo para tipo fuego */
 }
 
 .bug {
-	background-color: var(--color-bug);
+	background-color: var(--color-bug); /* Color de fondo para tipo bicho */
 }
 
 .dragon {
-	background: var(--color-dragon);
+	background: var(--color-dragon); /* Color de fondo para tipo dragón */
 }
 
 .flying {
-	background-color: var(--color-flying);
+	background-color: var(--color-flying); /* Color de fondo para tipo volador */
 }
 
 .ground {
-	background-color: var(--color-ground);
+	background-color: var(--color-ground); /* Color de fondo para tipo tierra */
 }
 
 .steel {
-	background-color: var(--color-steel);
+	background-color: var(--color-steel); /* Color de fondo para tipo acero */
 }
 
 .psychic {
-	background-color: var(--color-psychic);
+	background-color: var(--color-psychic); /* Color de fondo para tipo psíquico */
 }
 
 .ice {
-	background-color: var(--color-ice);
+	background-color: var(--color-ice); /* Color de fondo para tipo hielo */
 }
 
 .ghost {
-	background-color: var(--color-ghost);
+	background-color: var(--color-ghost); /* Color de fondo para tipo fantasma */
 }
 
 .normal {
-	background-color: var(--color-normal);
+	background-color: var(--color-normal); /* Color de fondo para tipo normal */
 }
 
 .rock {
-	background-color: var(--color-rock);
+	background-color: var(--color-rock); /* Color de fondo para tipo roca */
 }
 
 .electric {
-	background-color: var(--color-electric);
+	background-color: var(--color-electric); /* Color de fondo para tipo eléctrico */
 }
 
 .fighting {
-	background-color: var(--color-fighting);
+	background-color: var(--color -fighting); /* Color de fondo para tipo lucha */
 }
 
 .fairy {
-	background-color: var(--color-fairy);
+	background-color: var(--color-fairy); /* Color de fondo para tipo hada */
 }
 
 .dark {
-	background-color: var(--color-dark);
+	background-color: var(--color-dark); /* Color de fondo para tipo oscuro */
 }
 
 /* Container Filters */
 .container-filters {
-	display: flex;
-	justify-content: center;
-
-	position: fixed;
-	top: 0;
-	left: -300px;
-	width: 250px;
-
-	color: #000;
-	background-color: var(--color4);
-	font-weight: 700;
-	height: 100%;
-	padding-top: 140px;
-	transition: all 0.3s linear;
+	display: flex; /* Usar flexbox para el contenedor de filtros */
+	justify-content: center; /* Centrar contenido horizontalmente */
+	position: fixed; /* Posición fija */
+	top: 0; /* Alinear al top */
+	left: -300px; /* Fuera de la vista inicialmente */
+	width: 250px; /* Ancho del contenedor */
+	color: #000; /* Color del texto */
+	background-color: var(--color4); /* Color de fondo */
+	font-weight: 700; /* Peso de la fuente */
+	height: 100%; /* Altura completa */
+	padding-top: 140px; /* Relleno superior */
+	transition: all 0.3s linear; /* Transición suave */
 }
 
 .container-filters.active {
-	left: 0;
+	left: 0; /* Mostrar el contenedor al activarse */
 }
 
 .filter-by-type {
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
+	display: flex; /* Usar flexbox para el filtro por tipo */
+	flex-direction: column; /* Dirección vertical */
+	gap: 20px; /* Espacio entre elementos */
 }
 
 .filter-by-type span {
-	font-weight: 700;
-	font-size: 22px;
+	font-weight: 700; /* Peso de la fuente */
+	font-size: 22px; /* Tamaño de fuente */
 }
 
 .group-type {
-	display: flex;
-	gap: 10px;
-
-	margin-left: 15px;
+	display: flex; /* Usar flexbox para el grupo de tipos */
+	flex-wrap: wrap; /* Permitir que los elementos se envuelvan */
+	gap: 10px; /* Espacio entre tipos */
+	margin-left: 15px; /* Margen izquierdo */
 }
 
 .group-type label {
-	cursor: pointer;
+	cursor: pointer; /* Cambiar cursor al pasar sobre el label */
 }
 
 /*
 =======================================
 Styles of Pokemon Single Page
-======================================= 
+=======================================
 */
 
 .main-pokemon {
-	display: flex;
-	flex-direction: column;
-	margin-top: 100px;
-	margin-bottom: 50px;
+	display: flex; /* Usar flexbox para la página de Pokémon */
+	flex-direction: column; /* Dirección vertical */
+	margin-top: 100px; /* Margen superior */
+	margin-bottom: 50px; /* Margen inferior */
 }
 
 .header-main-pokemon {
-	margin-top: 20px;
-	display: flex;
-	align-items: center;
-	position: relative;
+	margin-top: 20px; /* Margen superior */
+	display: flex; /* Usar flexbox */
+	align-items: center; /* Alinear elementos verticalmente */
+	position: relative; /* Posición relativa */
 }
 
 .number-pokemon {
-	position: absolute;
-	top: -130px;
-	left: 0;
-	font-size: 100px;
-	font-weight: 700;
-	color: #000;
+	position: absolute; /* Posición absoluta */
+	top: -130px; /* Alinear hacia arriba */
+	left: 0; /* Alinear a la izquierda */
+	font-size: 100px; /* Tamaño de fuente */
+	font-weight: 700; /* Peso de la fuente */
+	color: #000; /* Color del texto */
 }
 
 .container-img-pokemon {
-	order: 2;
-	flex: 1;
-	padding: 25px 25px 25px 0;
-	height: 400px;
+	order: 2; /* Orden de visualización */
+	flex: 1; /* Flexibilidad */
+	padding: 25px 25px 25px 0; /* Relleno */
+	height: 400px; /* Altura del contenedor de imagen */
 }
 
 .container-img-pokemon img {
-	height: 100%;
-	width: 100%;
+	height: 100%; /* Altura completa de la imagen */
+	width: 100%; /* Ancho completo de la imagen */
 }
 
 .container-info-pokemon {
-	display: flex;
-	flex-direction: column;
-	order: 1;
-	flex: 1;
+	display: flex; /* Usar flexbox para la información del Pokémon */
+	flex-direction: column; /* Dirección vertical */
+	order: 1; /* Orden de visualización */
+	flex: 1; /* Flexibilidad */
 }
 
 .container-info-pokemon h1 {
-	text-align: right;
-	font-size: 60px;
-
+	text-align: right; /* Alinear texto a la derecha */
+	font-size: 60px; /* Tamaño de fuente */
 }
 
 .info-pokemon {
-	display: flex;
-	justify-content: space-between;
-	margin-top: 20px;
+	display: flex; /* Usar flexbox para la información del Pokémon */
+	justify-content: space-between; /* Espacio entre elementos */
+	margin-top: 20px; /* Margen superior */
 }
 
-.group-info{
-	display: flex;
-	flex-direction: column;
-	gap: 10px;
-	margin-right: 190px;
+.group-info {
+	display: flex; /* Usar flexbox para el grupo de información */
+	flex-direction: column; /* Dirección vertical */
+	gap: 10px; /* Espacio entre elementos */
+	margin-right: 190px; /* Margen derecho */
 }
 
 .group-info p {
-	font-weight: 700;
-	font-size: 20px;
+	font-weight: 700; /* Peso de la fuente */
+	font-size: 20px; /* Tamaño de fuente */
 }
 
 .group-info span {
-	font-weight: 700;
-	font-size: 20px;
+	font-weight: 700; /* Peso de la fuente */
+	font-size: 20px; /* Tamaño de fuente */
 }
 
 /* Stats */
 .container-stats {
-	display: flex;
-	gap: 50px;
-	align-items: center;
+	display: flex; /* Usar flexbox para las estadísticas */
+	gap: 50px; /* Espacio entre estadísticas */
+	align-items: center; /* Alinear elementos verticalmente */
 }
 
 .stats {
-	display: flex;
-	flex-direction: column;
-	gap: 20px;
-	flex: 1;
-	margin-top: 20px;
+	display: flex; /* Usar flexbox para las estadísticas */
+	flex-direction: column; /* Dirección vertical */
+	gap: 20px; /* Espacio entre estadísticas */
+	flex: 1; /* Flexibilidad */
+	margin-top: 20px; /* Margen superior */
 }
 
 .stat-group {
-	display: flex;
-	align-items: center;
-	margin-bottom: 10px;
+	display: flex; /* Usar flexbox para el grupo de estadísticas */
+	align-items: center; /* Alinear elementos verticalmente */
+	margin-bottom: 10px; /* Margen inferior */
 }
 
 .stat-group span {
-	flex: 20%;
-	font-weight: 700;
-	font-size: 18px;
+	flex: 20%; /* Flexibilidad del texto de la estadística */
+	font-weight: 700; /* Peso de la fuente */
+	font-size: 18px; /* Tamaño de fuente */
 }
 
 .progress-container {
-    background-color: var(--color2); /* Color de fondo de la barra */
-    border-radius: 25px;
-    height: 40px; /* Altura de la barra */
-    width: 100%; /* Ancho completo del contenedor */
-    margin-left: 10px; /* Espacio entre el nombre y la barra */
-    position: relative;
+	background-color: var(--color2); /* Color de fondo de la barra */
+	border-radius: 25px; /* Bordes redondeados */
+	height: 40px; /* Altura de la barra */
+	width: 100%; /* Ancho completo del contenedor */
+	margin-left: 10px; /* Espacio entre el nombre y la barra */
+	position: relative; /* Posición relativa */
 }
 
 .progress-bar {
-    background-color: var(--color1); /* Color de la barra de progreso */
-    border-radius: 25px;
-    height: 100%; /* Altura completa del contenedor */
-    transition: width 0.5s ease; /* Transición suave al llenar la barra */
+	background-color: var(--color1); /* Color de la barra de progreso */
+	border-radius: 25px; /* Bordes redondeados */
+	height: 100%; /* Altura completa del contenedor */
+	transition: width 0.5s ease; /* Transición suave al llenar la barra */
 }
 
 .counter-stat {
-    position: absolute;
-    right: 5px; /* Ajustar según sea necesario */
-    color: #000; /* Color del texto */
-    font-weight: bold;
+	position: absolute; /* Posición absoluta */
+	right: 5px; /* Ajustar según sea necesario */
+	color: #000; /* Color del texto */
+	font-weight: bold; /* Peso de la fuente */
 }
 
 /* Search Page */
 
-.p-search{
-	margin-bottom: 30px;
-	font-size: 22px;
+.p-search {
+	margin-bottom: 30px; /* Margen inferior */
+	font-size: 22px; /* Tamaño de fuente */
 }
 
-.p-search span{
-	font-weight: 700;
+.p-search span {
+	font-weight: 700; /* Peso de la fuente */
 }
 
 /* Loader */
 
-.container-loader{
-	display: flex;
-	justify-content: center;
-	margin: 200px 0;
+.container-loader {
+	display: flex; /* Usar flexbox para el contenedor del loader */
+	justify-content: center; /* Centrar contenido horizontalmente */
+	margin: 200px 0; /* Margen superior e inferior */
 }
 
 .btn-evolution-card {
-	border: none;
-	padding: 20px 20px;
-	background-color: var(--color1);
-	color: #fff;
-	border-radius: 25px;
-	cursor: pointer;
-	font-weight: 900;
-	font-size: 20px;
-	margin-bottom: 40px;
-	margin-top: 40px;
-	width: 300px;
-	height: 70px;
+	border: none; /* Sin borde */
+	padding: 20px 20px; /* Relleno */
+	background-color: var(--color1); /* Color de fondo */
+	color: #fff; /* Color del texto */
+	border-radius: 25px; /* Bordes redondeados */
+	cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
+	font-weight: 900; /* Peso de la fuente */
+	font-size: 20px; /* Tamaño de fuente */
+	margin-bottom: 40px; /* Margen inferior */
+	margin-top: 40px; /* Margen superior */
+	width: 300px; /* Ancho del botón */
+	height: 70px; /* Altura del botón */
 }
-.btn-evolution-card:hover{
-	background-color: var(--color2);
-	color: #000;
-	font-weight: 700;
+
+.btn-evolution-card:hover {
+	background-color: var(--color2); /* Color de fondo al pasar el ratón */
+	color: #000; /* Color del texto al pasar el ratón */
+	font-weight: 700; /* Peso de la fuente al pasar el ratón */
 }
 
 .card-details {
-	display: flex;
-	align-items: center;
+	display: flex; /* Usar flexbox para los detalles de la carta */
+	align-items: center; /* Alinear elementos verticalmente */
 }
 
-.card-details h3{
-	font-weight: 1000;
-	font-size: 25px;
-	color: var(--color1);
+.card-details h3 {
+	font-weight: 1000 ; /* Peso de la fuente del título */
+	font-size: 25px; /* Tamaño de fuente del título */
+	color: var(--color1); /* Color del título */
 }
 
-.card-details p{
-	font-weight: 900;
-	font-size: 20px;
-	color: #000;
+.card-details p {
+	font-weight: 900; /* Peso de la fuente del párrafo */
+	font-size: 20px; /* Tamaño de fuente del párrafo */
+	color: #000; /* Color del texto del párrafo */
 }
 
-.card-details img{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	height: 250px;
-}
 .card-details img {
-	width: 50%;
-	height: 50%;
+	display: flex; /* Usar flexbox para la imagen */
+	align-items: center; /* Alinear elementos verticalmente */
+	justify-content: center; /* Centrar contenido horizontalmente */
+	height: 250px; /* Altura de la imagen */
+}
+
+.card-details img {
+	width: 50%; /* Ancho de la imagen */
+	height: 50%; /* Alto de la imagen */
 }
 
 /* Btn Load More */
 
-.container-btn-load-more{
-	display: flex;
-	justify-content: center;
-
-	margin-bottom: 20px;
-	margin-top: 20px;
+.container-btn-load-more {
+	display: flex; /* Usar flexbox para el contenedor del botón de cargar más */
+	justify-content: center; /* Centrar contenido horizontalmente */
+	margin-bottom: 20px; /* Margen inferior */
+	margin-top: 20px; /* Margen superior */
 }
 
-.btn-load-more{
-	border: none;
-	padding: 15px 40px;
-	background-color: var(--color1);
-	color: #fff;
-	border-radius: 10px;
-	cursor: pointer;
-	font-weight: 600;
+.btn-load-more {
+	border: none; /* Sin borde */
+	padding: 15px 40px; /* Relleno */
+	background-color: var(--color1); /* Color de fondo */
+	color: #fff; /* Color del texto */
+	border-radius: 10px; /* Bordes redondeados */
+	cursor: pointer; /* Cambiar cursor al pasar sobre el botón */
+	font-weight: 600; /* Peso de la fuente */
 }
 
-.btn-load-more:hover{
-	background-color: var(--color2);
-	color: #000;
-	font-weight: 600;
+.btn-load-more:hover {
+	background-color: var(--color2); /* Color de fondo al pasar el ratón */
+	color: #000; /* Color del texto al pasar el ratón */
+	font-weight: 600; /* Peso de la fuente al pasar el ratón */
 }
 
+/* Media Queries para dispositivos móviles */
 @media (max-width: 768px) {
 	/* Globales */
 	.container {
-		padding: 0 10px;
+		padding: 0 10px; /* Relleno lateral */
 	}
 
 	/* Header */
 	header {
-		flex-direction: column;
-		padding: 20px 0;
-		gap: 20px;
+		flex-direction: column; /* Dirección vertical */
+		padding: 20px 0; /* Relleno superior e inferior */
+		gap: 20px; /* Espacio entre elementos */
 	}
 
 	.logo img {
-		width: 120px;
+		width: 120px; /* Ancho de la imagen del logo en móviles */
 	}
 
 	.form-group {
-		width: 100%;
-		padding: 10px;
-		border-radius: 20px;
+		width: 100%; /* Ancho completo del grupo de formulario */
+		padding: 10px; /* Relleno */
+		border-radius: 20px; /* Bordes redondeados */
 	}
 
 	.form-group input {
-		width: 100%;
-		font-size: 14px;
+		width: 100%; /* Ancho completo del campo de entrada */
+		font-size: 14px; /* Tamaño de fuente */
 	}
 
 	.btn-search {
-		padding: 10px 20px;
+		padding: 10px 20px; /* Relleno */
 	}
 
 	/* Card List Pokemon */
 	.card-list-pokemon {
-		grid-template-columns: repeat(2, 1fr);
-		gap: 10px;
+		grid-template-columns: repeat(2, 1fr); /* Dos columnas en móviles */
+		gap: 10px; /* Espacio entre cartas */
 	}
 
 	.card-img {
-		height: 180px;
+		height: 180px; /* Altura de la imagen de la carta en móviles */
 	}
 
 	.card-info h3 {
-		font-size: 16px;
+		font-size: 16px; /* Tamaño de fuente del título en móviles */
 	}
 
 	.card-types span {
-		font-size: 14px;
-		padding: 8px 15px;
+		font-size: 14px; /* Tamaño de fuente de los tipos en móviles */
+		padding: 8px 15px; /* Relleno */
 	}
 
-	/* Container Filters */
 	.container-filters {
-		width: 220px;
-		padding-top: 80px;
+		width: 100%; /* Ancho completo del contenedor de filtros en móviles */
+		padding-top: 80px; /* Relleno superior reducido */
+	}
+
+	.group-type {
+		justify-content: center; /* Centrar elementos en móviles */
 	}
 
 	/* Pokemon Single Page */
 	.main-pokemon {
-		margin-top: 50px;
-		margin-bottom: 30px;
+		margin-top: 50px; /* Reducir margen superior en móviles */
+		margin-bottom: 20px; /* Reducir margen inferior en móviles */
+	}
+
+	.header-main-pokemon {
+		flex-direction: column; /* Cambiar a dirección vertical */
+		align-items: center; /* Centrar elementos */
 	}
 
 	.number-pokemon {
-		font-size: 60px;
-		top: -100px;
-	}
-
-	.container-info-pokemon h1 {
-		font-size: 40px;
-		text-align: center;
+		font-size: 60px; /* Reducir tamaño de fuente en móviles */
+		top: -80px; /* Ajustar posición en móviles */
 	}
 
 	.container-img-pokemon {
-		order: 1;
-		height: 300px;
-		padding: 15px 0;
+		padding: 15px; /* Reducir relleno en móviles */
+		height: auto; /* Altura automática para adaptarse a la imagen */
+	}
+
+	.container-info-pokemon h1 {
+		font-size: 40px; /* Reducir tamaño de fuente en móviles */
+		text-align: center; /* Centrar texto en móviles */
 	}
 
 	.info-pokemon {
-		flex-direction: column;
-		align-items: center;
-		gap: 20px;
+		flex-direction: column; /* Cambiar a dirección vertical */
+		align-items: center; /* Centrar elementos */
+	}
+
+	.group-info {
+		margin-right: 0; /* Eliminar margen derecho en móviles */
+		text-align: center; /* Centrar texto en móviles */
 	}
 
 	.group-info p, .group-info span {
-		font-size: 16px;
+		font-size: 18px; /* Reducir tamaño de fuente en móviles */
 	}
 
-	/* Stats */
 	.container-stats {
-		flex-direction: column;
-		gap: 20px;
+		flex-direction: column; /* Cambiar a dirección vertical */
+		align-items: center; /* Centrar elementos */
+	}
+
+	.stat-group {
+		width: 100%; /* Ancho completo en móviles */
+		justify-content: space-between; /* Espacio entre elementos */
 	}
 
 	.stat-group span {
-		font-size: 16px;
+		font-size: 16px; /* Reducir tamaño de fuente en móviles */
 	}
 
-	.progress-bar {
-		height: 20px;
+	.progress-container {
+		width: 90%; /* Ancho reducido en móviles */
 	}
 
-	/* Loader & Load More Button */
-	.container-loader {
-		margin: 100px 0;
+	.counter-stat {
+		font-size: 14px; /* Reducir tamaño de fuente en móviles */
 	}
 
 	.container-btn-load-more {
-		margin: 15px 0;
+		margin: 15px 0; /* Margen superior e inferior */
 	}
 
 	.btn-load-more {
-		padding: 10px 25px;
+		padding: 10px 25px; /* Relleno del botón de cargar más en móviles */
 	}
 }

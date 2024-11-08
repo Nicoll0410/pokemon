@@ -1,23 +1,29 @@
-import { useContext } from 'react';
-import { PokemonContext } from '../context/PokemonContext';
+import { useContext } from 'react'; // Importa el hook useContext desde React.
+import { PokemonContext } from '../context/PokemonContext'; // Importa el contexto PokemonContext desde el archivo correspondiente.
 
-export const FilterBar = () => {
-	const { active, handleCheckbox } = useContext(PokemonContext);
+export const FilterBar = () => { // Define el componente FilterBar.
+	const { active, handleCheckbox } = useContext(PokemonContext); // Usa el contexto PokemonContext para obtener el estado 'active' y la función 'handleCheckbox'.
 
 	return (
+		// Crea un div que contiene los filtros, aplicando la clase 'active' si 'active' es verdadero.
 		<div className={`container-filters ${active ? 'active' : ''}`}>
 			<div className='filter-by-type'>
 				<span>Tipo</span>
 
 				<div className='group-type'>
 					<input
+						// Establece el tipo de entrada como checkbox.
 						type='checkbox'
+						// Asigna la función handleCheckbox para manejar cambios en el checkbox.
 						onChange={handleCheckbox}
+						// Establece el nombre del checkbox como 'grass'.
 						name='grass'
+						// Establece el ID del checkbox como 'grass'.
 						id='grass'
 					/>
 					<label htmlFor='grass'>Planta</label>
 				</div>
+				{/* Repite el mismo patrón para otros tipos de Pokémon */}
 				<div className='group-type'>
 					<input
 						type='checkbox'
